@@ -1,0 +1,47 @@
+extends layout
+
+block content
+    h1=title
+    p Welcome to #{title}
+
+    form(method="POST" action="/game/reset" onsubmit="resetGame()")
+        input(type='submit' value='Restart')
+    br
+    
+    div#board
+    table#tictac-table
+    
+        tr#row0
+            td(id=`${fields[0].cellId}`, onclick=`clickHandler('${fields[0].cellId}')`) #{fields[0].content}
+            td(id=`${fields[1].cellId}`, onclick=`clickHandler('${fields[1].cellId}')`) #{fields[1].content}
+            td(id=`${fields[2].cellId}`, onclick=`clickHandler('${fields[2].cellId}')`) #{fields[2].content}
+            td(id=`${fields[3].cellId}`, onclick=`clickHandler('${fields[3].cellId}')`) #{fields[3].content}
+            td(id=`${fields[4].cellId}`, onclick=`clickHandler('${fields[4].cellId}')`) #{fields[4].content}
+
+        tr#row1
+            td(id=`${fields[5].cellId}`, onclick=`clickHandler('${fields[5].cellId}')`) #{fields[5].content}
+            td(id=`${fields[6].cellId}`, onclick=`clickHandler('${fields[6].cellId}')`) #{fields[6].content}
+            td(id=`${fields[7].cellId}`, onclick=`clickHandler('${fields[7].cellId}')`) #{fields[7].content}
+            td(id=`${fields[8].cellId}`, onclick=`clickHandler('${fields[8].cellId}')`) #{fields[8].content}
+            td(id=`${fields[9].cellId}`, onclick=`clickHandler('${fields[9].cellId}')`) #{fields[9].content}
+
+        tr#row2
+            td(id=`${fields[10].cellId}`, onclick=`clickHandler('${fields[10].cellId}')`) #{fields[10].content}
+            td(id=`${fields[11].cellId}`, onclick=`clickHandler('${fields[11].cellId}')`) #{fields[11].content}
+            td(id=`${fields[12].cellId}`, onclick=`clickHandler('${fields[12].cellId}')`) #{fields[12].content}
+            td(id=`${fields[13].cellId}`, onclick=`clickHandler('${fields[13].cellId}')`) #{fields[13].content}
+            td(id=`${fields[14].cellId}`, onclick=`clickHandler('${fields[14].cellId}')`) #{fields[14].content}
+
+        tr#row3
+            td(id=`${fields[15].cellId}`, onclick=`clickHandler('${fields[15].cellId}')`) #{fields[15].content}
+            td(id=`${fields[16].cellId}`, onclick=`clickHandler('${fields[16].cellId}')`) #{fields[16].content}
+            td(id=`${fields[17].cellId}`, onclick=`clickHandler('${fields[17].cellId}')`) #{fields[17].content}
+            td(id=`${fields[18].cellId}`, onclick=`clickHandler('${fields[18].cellId}')`) #{fields[18].content}
+            td(id=`${fields[19].cellId}`, onclick=`clickHandler('${fields[19].cellId}')`) #{fields[19].content}
+
+        tr#row4
+            td(id=`${fields[20].cellId}`, onclick=`clickHandler('${fields[20].cellId}')`) #{fields[20].content}
+            td(id=`${fields[21].cellId}`, onclick=`clickHandler('${fields[21].cellId}')`) #{fields[21].content}
+            td(id=`${fields[22].cellId}`, onclick=`clickHandler('${fields[22].cellId}')`) #{fields[22].content}
+            td(id=`${fields[23].cellId}`, onclick=`clickHandler('${fields[23].cellId}')`) #{fields[23].content}
+            td(id=`${fields[24].cellId}`, onclick=`clickHandler('${fields[24].cellId}')`) #{fields[24].content}
