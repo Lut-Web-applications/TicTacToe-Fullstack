@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const path = require('path');
 const Promise = require('bluebird');
@@ -7,7 +8,7 @@ const app = express();
 
 /** Connect db */
 const mongoose = require('mongoose');
-const mongoURL = "mongodb+srv://tictactoe:tictactoe@tictactoecluster-fkilk.mongodb.net/app?retryWrites=true&w=majority";
+const mongoURL = process.env.MONGO_URL;
 mongoose.connect(mongoURL, {useUnifiedTopology: true, useNewUrlParser: true});
 mongoose.Promise = Promise;
 
